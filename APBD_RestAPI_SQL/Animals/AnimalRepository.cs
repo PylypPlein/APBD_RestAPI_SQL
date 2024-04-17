@@ -3,11 +3,11 @@ namespace APBD_RestAPI_SQL.Animals;
 
 public interface IAnimalRepository
 {
-    public IEnumerable<Animal> FetchAllStudents(string orderBy);
+    public IEnumerable<Animal> FetchAllAnimals(string orderBy);
     public bool CreateAnimal(string name);
 }
 
-public class AnimalRepository
+public class AnimalRepository : IAnimalRepository
 {
     private readonly IConfiguration _configuration;
     public AnimalRepository(IConfiguration configuration)

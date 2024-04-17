@@ -6,7 +6,7 @@ public interface IAnimalService
     public bool AddAnimal(CreateAnimalDTO dto);
 }
 
-public class AnimalService
+public class AnimalService : IAnimalService
 {
     private readonly IAnimalRepository _animalRepository;
     public AnimalService(IAnimalRepository animalRepository)
@@ -16,7 +16,7 @@ public class AnimalService
     
     public IEnumerable<Animal> GetAllAnimals(string orderBy)
     {
-        return _animalRepository.FetchAllStudents(orderBy);
+        return _animalRepository.FetchAllAnimals(orderBy);
     }
 
     public bool AddAnimal(CreateAnimalDTO dto)

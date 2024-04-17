@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 namespace APBD_RestAPI_SQL.Animals;
+
 
 [ApiController]
 [Route("/api/animal")]
-public class AnimalController
+public class AnimalController : ControllerBase
 {
     private readonly IAnimalService _animalService;
     public AnimalController(IAnimalService animalService)
