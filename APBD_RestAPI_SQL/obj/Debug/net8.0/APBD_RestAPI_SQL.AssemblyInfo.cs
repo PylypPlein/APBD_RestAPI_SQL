@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APBD_RestAPI_SQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35d8e16dcdd751f9de2a2eaa4fed8ea18a2c8901")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37cbd63e5e785f155d2c6f6d0f3077cee1eb8bcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("APBD_RestAPI_SQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APBD_RestAPI_SQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

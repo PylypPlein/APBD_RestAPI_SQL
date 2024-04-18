@@ -26,10 +26,28 @@ public class AnimalController : ControllerBase
         return Ok(id);
     }
     
-    [HttpPost]
-    public IActionResult AnimalStudent([FromBody] CreateAnimalDTO dto)
+    [HttpPost("")]
+    public IActionResult AddAnimal([FromBody] CreateAnimalDTO dto)
     {
         var success = _animalService.AddAnimal(dto);
         return success ? StatusCode(StatusCodes.Status201Created) : Conflict();
+    }
+
+    [HttpPut("{idAnimal}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public IActionResult UpdateAnimal(int idAnimal, [FromBody] UpdateAnimalDTO dto)
+    {
+        var success = _animalService.UpdateAnimal(idAnimal, dto);
+        return success ? NoContent() : NotFound();
+    }
+
+    [HttpDelete("{idAnimal}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public IActionResult DeleteAnimal(int idAnimal)
+    {
+        var success = _animalService.DeleteAnimal(idAnimal);
+        return success ? NoContent() : NotFound();
     }
 }
